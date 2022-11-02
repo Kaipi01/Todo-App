@@ -23,5 +23,8 @@
     "sass": "^1.55.0",
     "stylelint": "^14.13.0",
     "stylelint-config-property-sort-order-smacss": "^9.0.0"
+  },
+  "dependencies": {
+    "sortablejs": "^1.15.0"
   }
 }
