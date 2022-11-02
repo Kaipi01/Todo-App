@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Kaipi01/Todo-App
-- Live Site URL: 
+- Live Site URL: https://kaipi01.github.io/Todo-App/
 
 ## My process
 
@@ -47,6 +47,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - SCSS
+- Sortable.js library
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
