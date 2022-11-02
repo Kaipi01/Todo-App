@@ -1,36 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <script defer type="module" src="./js/main.js"></script>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">todo</h1>
+      <button class="btn theme-btn header__btn">
+        <img
+          class="theme-btn-icon theme-btn-icon-moon"
+          src="./images/icon-moon.svg"
+          alt="switch to dark mode"
+        />
+        <img
+          class="theme-btn-icon--hide theme-btn-icon-sun"
+          src="./images/icon-sun.svg"
+          alt="switch to light mode"
+        />
+      </button>
+    </header>
+    <main class="todo">
+      <div class="todo__form">
+        <label class="todo__input-label" for="add-task-input">
+          Add new task
+        </label>
+        <button class="btn task__btn-check">
+          <img
+            class="task__btn-check-icon"
+            src="./images/icon-check.svg"
+            alt="task complete"
+          />
+        </button>
+        <input
+          class="todo__input"
+          type="text"
+          name="add-task-input"
+          id="add-task-input"
+          placeholder="Create a new todo..."
+        />
+      </div>
+      <ul class="todo__list">
+        <li class="task task--complete">
+          <button class="btn task__btn-check">
+            <img
+              class="task__btn-check-icon"
+              src="./images/icon-check.svg"
+              alt="task complete"
+            />
+          </button>
+          <p class="task__name">Complete online JavaScript course</p>
+          <button class="btn task__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete task" />
+          </button>
+        </li>
+        <li class="task">
+          <button class="btn task__btn-check">
+            <img
+              class="task__btn-check-icon"
+              src="./images/icon-check.svg"
+              alt="task complete"
+            />
+          </button>
+          <p class="task__name">Jog around the park x3</p>
+          <button class="btn task__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete task" />
+          </button>
+        </li>
+        <li class="task">
+          <button class="btn task__btn-check">
+            <img
+              class="task__btn-check-icon"
+              src="./images/icon-check.svg"
+              alt="task complete"
+            />
+          </button>
+          <p class="task__name">10 minutes meditation</p>
+          <button class="btn task__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete task" />
+          </button>
+        </li>
+        <li class="task">
+          <button class="btn task__btn-check">
+            <img
+              class="task__btn-check-icon"
+              src="./images/icon-check.svg"
+              alt="task complete"
+            />
+          </button>
+          <p class="task__name">Read for 1 hour</p>
+          <button class="btn task__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete task" />
+          </button>
+        </li>
+        <li class="task">
+          <button class="btn task__btn-check">
+            <img
+              class="task__btn-check-icon"
+              src="./images/icon-check.svg"
+              alt="task complete"
+            />
+          </button>
+          <p class="task__name">Pick up groceries</p>
+          <button class="btn task__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete task" />
+          </button>
+        </li>
+        <li class="task">
+          <button class="btn task__btn-check">
+            <img
+              class="task__btn-check-icon"
+              src="./images/icon-check.svg"
+              alt="task complete"
+            />
+          </button>
+          <p class="task__name">Complete Todo App on Frontend Mentor</p>
+          <button class="btn task__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete task" />
+          </button>
+        </li>
+      </ul>
+      <div class="todo__options">
+        <div class="todo__items">
+          <p class="todo__items-info">
+            <span class="todo__items-info-number">5</span>
+            items left
+          </p>
+          <button class="btn todo__items-clear">Clear Completed</button>
+        </div>
+        <div class="todo__sort">
+          <button
+            class="btn todo__sort-btn todo__sort-btn--active todo__sort-btn-all"
+          >
+            All
+          </button>
+          <button class="btn todo__sort-btn todo__sort-btn-active">
+            Active
+          </button>
+          <button class="btn todo__sort-btn todo__sort-btn-completed">
+            Completed
+          </button>
+        </div>
+      </div>
+      <p class="todo__tip">Drag and drop to reorder list</p>
+    </main>
+  </body>
 </html>
