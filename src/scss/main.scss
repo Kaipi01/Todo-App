@@ -1,0 +1,60 @@
+@use "./layout/header";
+@use "./layout/todo";
+@use "./components/task";
+@use "./components/btn";
+@use "./components/theme-btn";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  --Primary-Text-Color: hsl(235, 19%, 35%);
+  --Secondary-Text-Color: hsl(236, 9%, 61%);
+  --Bg-Color: hsl(230, 15%, 92%);
+  --Tile-Color: hsl(0, 0%, 98%);
+  --Logo-Color: hsl(0, 0%, 98%);
+  --Icon-Color: hsl(236, 9%, 61%);
+  --Strap-Color: hsl(233, 11%, 84%);
+  --Transition: all 0.2s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  transition: var(--Transition);
+  background-color: var(--Bg-Color);
+  background-image: url(../images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--Primary-Text-Color);
+  font-size: 18px;
+  @media (min-width: 600px) {
+    background-image: url(../images/bg-desktop-light.jpg);
+  }
+}
+
+body.dark {
+  --Primary-Text-Color: hsl(236, 33%, 92%);
+  --Secondary-Text-Color: hsl(234, 11%, 52%);
+  --Bg-Color: hsl(235, 21%, 11%);
+  --Tile-Color: hsl(235, 24%, 19%);
+  --Icon-Color: hsl(233, 14%, 35%);
+  --Strap-Color: hsl(237, 14%, 26%);
+
+  background-image: url(../images/bg-mobile-dark.jpg);
+  @media (min-width: 600px) {
+    background-image: url(../images/bg-desktop-dark.jpg);
+  }
+}
