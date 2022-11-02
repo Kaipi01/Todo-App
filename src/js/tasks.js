@@ -8,7 +8,6 @@ const todoTip = document.querySelector(".todo__tip");
 let itemsNumber = 5;
 let isNewTaskComplete = false;
 
-
 export function remove(task) {
   task.remove();
   if (task.classList[1] !== "task--complete") {
