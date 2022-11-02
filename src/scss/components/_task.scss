@@ -1,0 +1,123 @@
+.task {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  padding: 17px 15px;
+  transition: var(--Transition);
+  border-bottom: 1px solid var(--Strap-Color);
+  background-color: var(--Tile-Color);
+  font-size: 0.82rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+ 
+
+  @media (min-width: 650px) {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1300px) {
+    cursor: pointer;
+    &:hover {
+      .task__btn-delete {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--grab {
+    position: relative;
+    z-index: 3;
+    transition: all 0.1s linear;
+    opacity: 0.75;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+
+  &--complete {
+    .task__name {
+      color: var(--Secondary-Text-Color);
+      text-decoration: line-through;
+    }
+
+    .task__btn-check:first-child {
+      border: none;
+      background: var(--Check-Background);
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__name {
+    margin-right: auto;
+  }
+
+  &__btn {
+    &-delete {
+      transition: var(--Transition);
+      @media (min-width: 1300px) {
+        opacity: 0;
+
+        &:focus {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 14px;
+
+        @media (min-width: 1300px) {
+          width: 17px;
+        }
+      }
+    }
+
+    &-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      transition: var(--Transition);
+      border: 1px solid var(--Strap-Color) !important;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: var(--Bright-Blue) !important;
+      }
+
+      @media (min-width: 650px) {
+        margin-right: 20px;
+      }
+
+      &-icon {
+        display: none;
+      }
+
+      &--inputActive {
+        border: none;
+        background: var(--Check-Background);
+
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}

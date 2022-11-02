@@ -1,0 +1,13 @@
+.theme-btn {
+  &-icon {
+    width: 22px;
+
+    &-sun--hide {
+      display: none;
+    }
+    
+    &-moon--hide {
+      display: none;
+    }
+  }
+}
